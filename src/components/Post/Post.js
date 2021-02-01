@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {withRouter} from 'react-router-dom';
 import './Post.css';
 
 const post = (props) => (
@@ -11,4 +11,4 @@ const post = (props) => (
     </article>
 );
 
-export default post;
+export default withRouter(post); //withRouter acts as higher order component and passed the props passed by Router to the child components.  
