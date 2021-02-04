@@ -5,6 +5,10 @@ import Blog from './containers/Blog/Blog';
 class App extends Component {
   render() {
     return (
+
+      // <BrowserRouter basename='/my-app'> 
+      // {/* all the other redirect urls will get appended to this baseurl.  */}
+      
       <BrowserRouter>
         <div className="App">
           <Blog />

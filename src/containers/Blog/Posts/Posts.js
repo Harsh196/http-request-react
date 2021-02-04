@@ -7,9 +7,11 @@ import FullPost from '../FullPost/FullPost';
 //import {Link} from 'react-router-dom';
 class Posts extends Component{
     state={
-        posts:[]
+        posts:[],
+        error:false
     }
     componentDidMount(){
+        console.log(this.props);
         axios.get('/posts')
             .then(response=>{
                 const posts=response.data.slice(0,4);
@@ -23,6 +25,7 @@ class Posts extends Component{
             })
             .catch(error=>{
                 console.log(error);
+                this.setState({error:true});
             });
     }
 
